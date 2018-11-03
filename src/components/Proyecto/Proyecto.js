@@ -109,6 +109,11 @@ class Proyecto extends Component {
 
           </nav>
 
+          <div className="my-4">
+
+            {this.state.proyectosConst.map(task => <li className="list-group-item" key={task.nombre}>Nombre: {task.nombre}<br /></li>)}
+          </div>
+        
           <div className="form-group">
             <input type="text" className="form-control barra-busqueda" placeholder="Buscar Proyectos Por Nombre" name="nombreProyConst" value={this.state.nombreProyConst}
               onChange={this.updateInput.bind(this)} />
